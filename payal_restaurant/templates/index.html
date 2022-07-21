@@ -1,12 +1,19 @@
+
+{% include 'navbar.html' %}
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Base Template</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
-<body>
-    Hello World
+<body 
+     id="bg" style="background-image: url('{%static 'images/web_images/baseimage.jpg'%}');">
+
+  
 </body>
-</html> 
+</html>

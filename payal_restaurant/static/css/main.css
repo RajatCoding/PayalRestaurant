@@ -1,0 +1,18 @@
+#bg {
+background-repeat: no-repeat;
+background-size: 1700px 860px;
+background-position: top;
+background-attachment: fixed;
+
+}
+
+.navbar-brand {
+font-size: xx-large;
+font-family: cursive;
+color: pink;
+
+}
+.nav-link{
+color: bisque;
+font-size: x-large;
+}
