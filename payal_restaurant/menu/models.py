@@ -9,7 +9,11 @@ class Shef(models.Model):
 
 class Menu(models.Model):
     Dish_Name = models.CharField(max_length=30)
-    Dish_Quantity = models.IntegerField()
+    Dish_Image = models.ImageField()
+    Dish_Price = models.IntegerField(max_length=30)
+
+    
+
 
 
     
