@@ -1,5 +1,5 @@
 from django.db import models
-from zmq import DISH
+
 
 # Create your models here.
 
@@ -10,6 +10,6 @@ class Shef(models.Model):
 class Menu(models.Model):
     Dish_Name = models.CharField(max_length=30)
     Dish_Quantity = models.IntegerField()
-    
+
 
     
