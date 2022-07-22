@@ -27,3 +27,7 @@ def drinks(request):
     id = Category.objects.get(Dish_Category='Drinks')
     foods = Menu.objects.filter(Category=id)
     return render(request, 'drinks.html', {'foods':foods})
+    
+def about_us(request):
+    return render(request, 'aboutus.html')
+

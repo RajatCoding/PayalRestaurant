@@ -1,0 +1,59 @@
+{% extends 'nav.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title%} About Us {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css.map' %}">
+    <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'javascript/bootstrap.min.js.map' %}"></script>
+    <script src="{% static 'javascript/jquery.js' %}"></script>
+    <script src="{% static 'javascript/jquery.min.map' %}"></script>
+    <script src="{% static 'javascript/popper.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+{% block leftside %}
+<div class="col-md-12 mt-5 offset-1 "><p>&nbsp;</p>
+<div class="col-md-12 mt-5">
+
+<img src="{% static 'images/web_images/my_img.jpg '%}" width="220px" height="256px" alt="">
+</div>
+</div>
+
+{% endblock leftside %}
+
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 mt-5 ">
+        <h3>About Us</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p class="col-md-11 mt-3 offset-1" style="font-size: 20px; font-family: sans-serif;">
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, id accusantium amet aliquam. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Cumque odio quo quod, quibusdam accusantium laborum, rem eius
+            quis quia, voluptate alias vitae placeat. Provident ut consequatur quidem dolorem beatae cupiditate!
+        </p>
+        <p class="col-md-10s mt-5 offset-2" style="font-size: 20px; font-family: sans-serif;">
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, id accusantium amet aliquam. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Cumque odio quo quod, quibusdam accusantium laborum, rem eius
+            quis quia, voluptate alias vitae placeat. Provident ut consequatur quidem dolorem beatae cupiditate!
+        </p>
+        <div class="row">
+            <div class="col-md-12 mt-5 offset-2">
+        <img src="{% static 'images/web_images/wine image.jpg '%}" width="120px" height="150px" alt="">
+
+            </div></div>
+
+        {% endblock content %}
+
+</html>

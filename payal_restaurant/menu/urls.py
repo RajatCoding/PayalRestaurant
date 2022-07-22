@@ -9,6 +9,7 @@ urlpatterns = [
     path('south_indian/', views.south_indian_menu, name = 'south_indian'),
     path('chinese/', views.chinese, name = 'chinese'),
     path('drinks/', views.drinks, name = 'drinks'),
+    path('about_us/', views.about_us, name = 'about_us'),
 
 
 ]
