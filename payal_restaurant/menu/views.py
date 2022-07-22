@@ -5,7 +5,7 @@ from . models import Menu,Category
 # Create your views here.
 
 def home(request):
-    return render(request, 'Base.html')
+    return render(request, 'menu_base.html')
 
 
 def north_indian_menu(request):

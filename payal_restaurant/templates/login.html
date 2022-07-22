@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block title %}Login{% endblock title%}
+
+{% block content %}
+<div class="row" style="color: whitesmoke ;">
+    <div class="col-md-12 mt-5 ">
+        <h3>Login</h3>
+    </div>
+</div>
+
+<form action="" method="post">
+    {{form.as_p}}
+    <input type="submit" value="submit">
+</form>
+don't have account?<a href="{% url 'signup'%}">SignUp Here</a> 
+{% endblock content %}
