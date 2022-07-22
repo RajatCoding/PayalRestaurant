@@ -18,5 +18,11 @@ font-size: x-large;
 }
 .north{
 color:antiquewhite;
+}
+
+
+
+table tr th td {
+border: solid black;
 
 }

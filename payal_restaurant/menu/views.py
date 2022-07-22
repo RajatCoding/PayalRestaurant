@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from . models import Menu,Category
+
 
 # Create your views here.
 
@@ -7,13 +9,21 @@ def home(request):
 
 
 def north_indian_menu(request):
-    return render(request, 'north_indian.html')
+    id = Category.objects.get(Dish_Category='North Indian')
+    foods = Menu.objects.filter(Category=id)
+    return render(request, 'north_indian.html', {'foods':foods})
 
 def south_indian_menu(request):
-    return render(request, 'south_indian.html')
+    id = Category.objects.get(Dish_Category='South Indian')
+    foods = Menu.objects.filter(Category=id)
+    return render(request, 'south_indian.html', {'foods':foods})
 
 def chinese(request):
-    return render(request, 'chinese.html')
+    id = Category.objects.get(Dish_Category='Chinese')
+    foods = Menu.objects.filter(Category=id)
+    return render(request, 'chinese.html', {'foods':foods})
 
 def drinks(request):
-    return render(request, 'drinks.html')
+    id = Category.objects.get(Dish_Category='Drinks')
+    foods = Menu.objects.filter(Category=id)
+    return render(request, 'drinks.html', {'foods':foods})

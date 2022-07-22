@@ -1,10 +1,59 @@
-{% extends 'base.html' %}
+{% extends 'nav.html'%}
+<!DOCTYPE html>
 {% load static %}
+<html lang="en">
 
-{% block title %} Chinese {% endblock title%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title%} Chinese {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css.map' %}">
+    <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'javascript/bootstrap.min.js.map' %}"></script>
+    <script src="{% static 'javascript/jquery.js' %}"></script>
+    <script src="{% static 'javascript/jquery.min.map' %}"></script>
+    <script src="{% static 'javascript/popper.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+suygcfvscvs
 
 {% block content %}
+<div class="row">
+    <div class="col-md-12 mt-5 ">
+        <h3>Chinese</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p class="col-md-11 mt-3 offset-1" style="font-size: 20px; font-family: sans-serif;">
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, id accusantium amet aliquam
+            corrupti.
+        </p>
 
-Abra ka mDabra
+
+        <table class="table table-hover">
+
+            <tbody>{% for food in foods %}
+               
+                <tr>
+
+                    <td><img src="{{food.Dish_Image.url}}" width="150px" height="150px" alt=""></td>
+                    <td class="col mt-5"><b>{{food.Dish_Name}}</b></td>
+                    <td class="col mt-5"><b>₹{{food.Dish_Price}}</b></td>
+                </tr>
+               
+                {% endfor %}
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
 
 {% endblock content %}
+
+</html>
