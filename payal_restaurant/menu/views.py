@@ -8,3 +8,12 @@ def home(request):
 
 def north_indian_menu(request):
     return render(request, 'north_indian.html')
+
+def south_indian_menu(request):
+    return render(request, 'south_indian.html')
+
+def chinese(request):
+    return render(request, 'chinese.html')
+
+def drinks(request):
+    return render(request, 'drinks.html')

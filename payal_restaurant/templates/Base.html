@@ -1,19 +1,96 @@
-
-{% include 'navbar.html' %}
-
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base Template</title>
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css.map' %}">
+    <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'javascript/bootstrap.min.js.map' %}"></script>
+    <script src="{% static 'javascript/jquery.js' %}"></script>
+    <script src="{% static 'javascript/jquery.min.map' %}"></script>
+    <script src="{% static 'javascript/popper.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-</head>
-<body 
-     id="bg" style="background-image: url('{%static 'images/web_images/baseimage.jpg'%}');">
 
+    
+</head>
+<body id="bg" style="background-image: url('{%static 'images/web_images/baseimage.jpg'%}');">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Payal's Restaurant</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="{% url 'north_indian'%}">North Indian</a></li>
+                      <li><a class="dropdown-item" href="{% url 'south_indian'%}">South Indian</a></li>
+                      <li><a class="dropdown-item" href="{% url 'chinese' %}">Chinese</a></li>
+                      <li><a class="dropdown-item" href="{% url 'drinks' %}">Drinks & Bevreges</a></li>
+
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+          <div class="row ">
+              <div class="col-md-12 ">
+                  {% for message in messages %}
+                  <div class="alert alert-{{message.tags}} alert-dismissible fade   show" role="alert">
+                      <strong>{{message}}</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid">
+          <div class="row ">
   
+                  <div class="col-md-2  ">
+                      {% block leftside %}
+                      {% endblock leftside %}
+                  </div>
+                  <div class="col-md-8  ">
+                      {% block content %}
+                      {% endblock content %}
+                  </div>
+  
+                  <div class="col-md-2">
+                      {% block sidebar %}
+                      {% endblock sidebar%}
+                  </div>
+  
+  
+          </div>
+      </div>
+      </main>
+    
+
+    
+    
 </body>
 </html>
