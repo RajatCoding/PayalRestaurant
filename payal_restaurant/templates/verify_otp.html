@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block title %} verify otp {% endblock title%}
+{% block content %}
+<fieldset class="form-group" style="color: whitesmoke;">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Verify">
+    </form>
+</fieldset>
+
+{% endblock content%}

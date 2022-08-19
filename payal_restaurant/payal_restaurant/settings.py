@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'menu',
+    'user',
+    'crispy_forms',
+    'rest_framework',
     
 ]
 
@@ -130,3 +133,6 @@ STATICFILES_DIRS = [STATICFILE_DIR]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+AUTH_USER_MODEL = "user.CustomUser"
+CRISPY_TEMPLATE_PACK = 'uni_form'

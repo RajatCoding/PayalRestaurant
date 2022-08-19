@@ -1,17 +1,32 @@
 {% extends 'base.html'%}
-
+{% load crispy_forms_tags %}
 {% block title %}SignUp{% endblock title%}
 
 {% block content %}
-<div class="row" style="color: whitesmoke ;">
-    <div class="col-md-12 mt-5 ">
-        <h3>SignUp</h3>
-    </div>
+
+<div class="content-section">
+
+  <fieldset class="form-group" style="color: whitesmoke;">
+    <legend>Register</legend>
+    <div class="col-md-4 ">
+      <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {% for fm in form %}
+        {{fm.label_tag}}<br>
+        {{fm}} <span> {{fm.errors}}
+          {% endfor %}
+          <br>
+
+          <button class="btn btn-success" type="submit">Submit</button>
+
+  </fieldset>
+
+
+
+
+  </form>
+</div>
 </div>
 
-<form action="" method="post">
-    {{form.as_p}}
-    <input type="submit" value="submit">
-</form>
-Already Register?<a href="{% url 'login'%}">Login Here</a> 
+
 {% endblock content %}

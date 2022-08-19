@@ -3,9 +3,9 @@ from . models import Menu,Category
 
 
 # Create your views here.
-
 def home(request):
     return render(request, 'menu_base.html')
+
 
 
 def north_indian_menu(request):
@@ -30,4 +30,5 @@ def drinks(request):
     
 def about_us(request):
     return render(request, 'aboutus.html')
+
 

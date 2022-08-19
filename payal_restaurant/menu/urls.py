@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from menu import views
+from user import views as user_views
 
 urlpatterns = [
    
@@ -10,6 +11,7 @@ urlpatterns = [
     path('chinese/', views.chinese, name = 'chinese'),
     path('drinks/', views.drinks, name = 'drinks'),
     path('about_us/', views.about_us, name = 'about_us'),
+ 
 
 
 ]

@@ -4,14 +4,28 @@
 
 {% block content %}
 <div class="row" style="color: whitesmoke ;">
-    <div class="col-md-12 mt-5 ">
+    <div class="col-md-4 mt-5 ">
         <h3>Login</h3>
+
+
+        <fieldset class="form-group" style="color: whitesmoke;">
+
+
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {% for fm in form %}
+                {{fm.label_tag}}<br>
+                {{fm}} <br>
+                <span> {{fm.errors}}
+                    {% endfor %}
+                    <br>
+
+                    <button class="btn btn-success" type="submit">Submit</button><br><br><br>
+
+
+
+                    don't have account?<a href="{% url 'signup'%}" style="color: rgb(254, 95, 95);"> SignUp Here</a>
+        </fieldset>
     </div>
 </div>
-
-<form action="" method="post">
-    {{form.as_p}}
-    <input type="submit" value="submit">
-</form>
-don't have account?<a href="{% url 'signup'%}">SignUp Here</a> 
 {% endblock content %}
